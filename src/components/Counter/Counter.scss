@@ -2,11 +2,13 @@
 
 .counter {
     display: grid;
+    grid-template-columns: 60px 20px 60px;
+    grid-template-rows: 30px 60px;
+    gap: 10px 20px;
     grid-template-areas: 
     "title title title"
     "decrement count increment";
-    width: 50%;
-    // box-shadow: 0px 0px 10px 5px rgb(220, 220, 249);
+    
 
     &__title {
         grid-area: title;
@@ -15,9 +17,12 @@
     }
 
     &__button {
-
-            border-radius: 50%;
-            border: none;
+        border-radius: 50%;
+        border: none;
+        font-size: 1.2rem;
+        padding: 0;
+        background-color: $color-darkgrey;
+        color: $color-yellow;
 
         &--decrement {
             grid-area: decrement;
@@ -31,5 +36,7 @@
     &__count {
         text-align: center;
         gird-area: count;
+        font-size: 1.2rem;
+        place-self: center;
     }
 }
