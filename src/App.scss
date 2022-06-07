@@ -1,11 +1,17 @@
 @use "./assets/sass/variables" as *;
+@use "./assets/sass/reset" as *;
 
 .ticket-tracker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-evenly;
+    background-color: $color-black;
+    height: 100vh;
+
+    &__title {
+        color: $color-lightgrey
+    }
 }
 
 .tracker-container {
