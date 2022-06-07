@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Tracker.scss"
+import Counter from '../Counter/Counter';
 
 const Tracker = (props) => {
 
@@ -9,11 +10,7 @@ const Tracker = (props) => {
     <div key={id} className='tracker'>
         <h2 className='tracker__name'>{name}</h2>
         <h3 className='tracker__role'>{role}</h3>
-        <div className='counter'>
-          <h4>Counter</h4>
-          <p>0</p>
-          <button></button>
-        </div>
+        <Counter />
     </div>
   )
 }
