@@ -1,3 +1,29 @@
 .counter {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    "title title title"
+    "decrement count increment";
+    width: 50%;
+    // box-shadow: 0px 0px 10px 5px rgb(220, 220, 249);
+
+    &__title {
+        grid-area: title;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__button {
+        &--decrement {
+            grid-area: decrement;
+        }
+
+        &--increment {
+            grid-area: increment;
+        }
+    }
+
+    &__count {
+        text-align: center;
+        gird-area: count;
+    }
 }
