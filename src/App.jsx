@@ -7,9 +7,11 @@ function App() {
 
 
   return (
-    <div className="tracker-container">
-      <h1>Ticket Tracker</h1>
-      {employees.map(employee => <Tracker id={employee.id} name={employee.name} role={employee.role} />)}
+    <div className="ticket-tracker">
+      <h1 className='ticket-tracker__title'>Ticket Tracker</h1>
+      <div className="tracker-container">
+        {employees.map(employee => <Tracker id={employee.id} name={employee.name} role={employee.role} />)}
+      </div>
     </div>
   );
 }
