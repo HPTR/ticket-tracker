@@ -13,6 +13,10 @@
     }
 
     &__button {
+
+            border-radius: 50%;
+            border: none;
+            
         &--decrement {
             grid-area: decrement;
         }
