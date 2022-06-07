@@ -6,9 +6,9 @@ const Counter = () => {
   return (
     <div className='counter'>
         <h4 className='counter__title'>Counter</h4>
-        <Button />
+        <Button className="counter__button counter__button--decrement" />
         <p className='counter__count'>0</p>
-        <Button />
+        <Button className="counter__button counter__button--increment" />
     </div>
   )
 }
