@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="tracker-container">
       <h1>Ticket Tracker</h1>
-      {employees.map(employee => <Tracker employee={employee} />)}
+      {employees.map(employee => <Tracker id={employee.id} name={employee.name} role={employee.role} />)}
     </div>
   );
 }

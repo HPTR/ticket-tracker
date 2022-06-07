@@ -3,7 +3,7 @@ import "./Tracker.scss"
 
 const Tracker = (props) => {
 
-  const {id, name, role } = props;
+  const { id, name, role } = props;
 
   return (
     <div key={id} className='tracker'>
