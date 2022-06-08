@@ -9,15 +9,15 @@
     width: 15%;
     height: 40vh;
     margin: 1%;
-    background-color: $color-lightgrey;
-    color: $color-darkgrey;
-    border: 2px solid $color-lightgrey;
+    background-color: $color-lightblue;
+    color: $color-blue;
+    border: 2px solid $color-lightblue;
     border-radius: 20px;
     transition: 1s;
     text-align: center;
 
     &:hover {
-        box-shadow: 0px 0px 30px 2px $color-lightgrey;
+        box-shadow: 0px 0px 30px 2px $color-lightblue;
         transition: 0.3s;
     }
 
