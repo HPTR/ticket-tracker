@@ -1,2 +1,61 @@
 @use "../../assets/sass/variables" as *;
 
+.add-employee {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 280px;
+    height: 40vh;
+    margin: 1%;
+    background-color: $color-lightblue;
+    color: $color-blue;
+    border-radius: 20px;
+    transition: 1s;
+    text-align: center;
+
+    &__add {
+        border-radius: 50%;
+        width: 94px;
+        border: none;
+        padding: 0;
+        background-color: $color-blue;
+        color: $color-lightblue;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 30px 2px $color-lightblue;
+        transition: 0.3s;
+    }
+
+    &:hover &__add {
+        box-shadow: 0px 0px 30px 2px $color-darkblue;
+        transition: 0.3s;
+    }
+
+    &__input {
+        max-width: 100%;
+        font-size: 1.5rem;
+        margin: 10px auto;
+        background-color: $color-blue;
+        color: $color-lightblue;
+        border: 1px solid $color-darkblue;
+        border-radius: 20px;
+        padding: 5px;
+
+        &::placeholder {
+            color: $color-lightblue;
+        }
+    }
+
+    &__button {
+        border-radius: 20px;
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px;
+        background-color: $color-blue;
+        color: $color-lightblue;
+    }
+}
