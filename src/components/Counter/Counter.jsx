@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 
-const Counter = () => {
+const Counter = (props) => {
 
-  const [count, setCount] = useState(0);
+  const { initialTickets } = props;
+  const [count, setCount] = useState(initialTickets ? initialTickets : Math.floor(Math.random()*20));
 
   const plusIcon = <FontAwesomeIcon icon={faPlus} />;
   const minusIcon = <FontAwesomeIcon icon={faMinus} />;
