@@ -2,13 +2,13 @@
 
 .tracker {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     border: 1px solid black;
-    width: 280px;
-    height: 40vh;
+    width: 200px;
+    height: 250px;
     margin: 1%;
     background-color: $color-lightblue;
     color: $color-blue;
@@ -23,10 +23,28 @@
 
     &__name {
         font-weight: bold;
-        margin-bottom: 8%;
     }
 
     &__role {
-        margin-bottom: 30%;
+        font-size: 0.9rem;
+    }
+
+    &__delete {
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        color: $color-darkblue;
+        background: none;
+        cursor: pointer;
+        align-self: flex-end;
+        justify-self: flex-start;
+        margin-right: 10%;
+        display: inline;
+    }
+}
+
+@media (min-width: 576px){
+    .tracker {
+        height: 40vh;
     }
 }
