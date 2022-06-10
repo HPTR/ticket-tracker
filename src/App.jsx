@@ -12,7 +12,7 @@ function App() {
     <div className="ticket-tracker">
       <h1 className='ticket-tracker__title'>Ticket Tracker</h1>
       <div className="tracker-container">
-        {listOfEmployees.map(employee => <Tracker key={employee.id} name={employee.name} role={employee.role} initialTickets={employee.initialTickets ? employee.initialTickets : 0} />)}
+        {listOfEmployees.map(employee => <Tracker key={employee.id} name={employee.name} role={employee.role} removeEmployee={setListOfEmployees} initialTickets={employee.initialTickets ? employee.initialTickets : 0} />)}
         <AddEmployee employees={listOfEmployees} addEmployee={setListOfEmployees} />
       </div>
     </div>
