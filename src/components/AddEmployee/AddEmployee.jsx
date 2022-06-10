@@ -1,15 +1,17 @@
 import "./AddEmployee.scss";
 import { React, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const AddEmployee = (props) => {
-    const plusIcon = <FontAwesomeIcon icon={faPlus} size="6x" />;
-    const [isInputActive, setIsInputActive] = useState(false);
 
     const {employees, addEmployee} = props;
+    const [isInputActive, setIsInputActive] = useState(false);
 
-    const handleClick = () => {
+    const plusIcon = <FontAwesomeIcon icon={faPlus} size="6x" />;
+    const crossIcon = <FontAwesomeIcon icon={faXmark} />
+
+    const toggleInputView = () => {
         if (!isInputActive) {
             setIsInputActive(true);
         } else {
@@ -20,7 +22,7 @@ const AddEmployee = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newUser = {
-            id: employees.length + 1,
+            id: employees[employees.length - 1].id + 1,
             name: event.target.name.value,
             role: event.target.role.value,
             initialTickets: event.target.initialTickets.value
@@ -29,10 +31,16 @@ const AddEmployee = (props) => {
         setIsInputActive(false);
     }
 
+    const handleCancel = (event) => {
+        event.preventDefault();
+        setIsInputActive(false);
+    }
+
     const plusButton = <div className="add-employee__add">{plusIcon}</div>
 
     const inputForm = (
         <form className='add-employee__form' onSubmit={handleSubmit}>
+            <button onClick={handleCancel} className='add-employee__cancel' alt="cancel">{crossIcon}</button>
             <input type="text" name="name" placeholder="Name" className='add-employee__input add-employee__input--name' />
             <input type="text" name="role" placeholder="Role" className='add-employee__input add-employee__input--role' />
             <input type="number" min="0" name="initialTickets" placeholder="Initial Tickets" className="add-employee__input add-employee__input--initial-tickets" />
@@ -40,9 +48,8 @@ const AddEmployee = (props) => {
         </form>
     )
 
-
   return (
-    <div className="add-employee" onClick={handleClick}>
+    <div className="add-employee" onClick={toggleInputView}>
         {isInputActive ? inputForm : plusButton}
     </div>
   )
