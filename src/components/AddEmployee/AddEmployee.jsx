@@ -1,5 +1,6 @@
-import "./AddEmployee.scss";
 import { React, useState } from "react";
+import "./AddEmployee.scss";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 

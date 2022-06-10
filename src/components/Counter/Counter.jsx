@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./Counter.scss"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
